@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DetailLabelTextStyle">
+        <item name="android:fontFamily">@font/gilory_semi_bold</item>
+        <item name="android:textColor">@color/label_color</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="DetailDateTimeTextStyle">
+        <item name="android:fontFamily">@font/gilory_semi_bold</item>
+        <item name="android:textColor">@color/outline_stroke_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="DetailDurationTextStyle" parent="DetailDateTimeTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FilterButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="backgroundTint">@android:color/white</item>
+    </style>
+</resources>

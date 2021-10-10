@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_scrollFlags="scroll|enterAlways"
+    tools:showIn="@layout/fragment_list">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/margin_normal"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_normal"
+        android:paddingBottom="@dimen/margin_small">
+
+        <ImageView
+            android:id="@+id/iv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:src="@drawable/ic_icoaddress" />
+
+        <TextView
+            android:id="@+id/tv_lbl_location"
+            style="@style/DetailLabelTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iv_address"
+            android:text="Location" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            style="@style/DetailDateTimeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_lbl_location"
+            android:layout_alignStart="@id/tv_lbl_location"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin_smaller"
+            android:text="Current location" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.2"
+        android:background="@color/label_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingEnd="@dimen/margin_normal"
+            android:paddingBottom="@dimen/margin_small">
+
+            <ImageView
+                android:id="@+id/iv_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_icodated" />
+
+            <TextView
+                android:id="@+id/tv_lbl_date"
+                style="@style/DetailLabelTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iv_calendar"
+                android:text="Date &amp; Time" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/DetailDateTimeTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_lbl_date"
+                android:layout_alignStart="@id/tv_lbl_date"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/margin_smaller"
+                android:text="NOW" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            android:background="@color/label_color" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingEnd="@dimen/margin_normal"
+            android:paddingBottom="@dimen/margin_small">
+
+            <ImageView
+                android:id="@+id/iv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_icotime" />
+
+            <TextView
+                android:id="@+id/tv_lbl_duration"
+                style="@style/DetailLabelTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iv_duration"
+                android:text="Duration" />
+
+            <TextView
+                android:id="@+id/tv_duration"
+                style="@style/DetailDateTimeTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_lbl_duration"
+                android:layout_alignStart="@id/tv_lbl_duration"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/margin_smaller"
+                android:text="1 hr" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btn_search"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@color/item_text_color"
+            android:fontFamily="@font/gilory_semi_bold"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="Go"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="UnusedAttribute" />
+
+    </LinearLayout>
+
+</LinearLayout>

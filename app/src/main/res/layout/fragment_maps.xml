@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MapsFragment" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_icoactionalert"
+        app:backgroundTint="@android:color/white"
+        app:elevation="16dp" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        app:layout_anchor="@id/card"
+        app:layout_anchorGravity="end">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_large"
+            android:src="@drawable/ic_icoactionlocate"
+            app:backgroundTint="@android:color/white"
+            app:elevation="16dp" />
+
+    </FrameLayout>
+
+    <TextView
+        style="@style/DetailDateTimeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_lbl_location"
+        android:layout_alignStart="@id/tv_lbl_location"
+        android:layout_centerInParent="true"
+        android:layout_gravity="top"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_smaller"
+        android:paddingBottom="@dimen/margin_normal"
+        android:text="Rent a car"
+        android:textColor="@color/secondary_brand"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_anchor="@id/card" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/margin_normal"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="16dp">
+
+        <include
+            android:id="@+id/search_control"
+            layout="@layout/item_search_control" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

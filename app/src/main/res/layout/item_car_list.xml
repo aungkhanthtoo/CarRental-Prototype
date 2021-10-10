@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingTop="@dimen/margin_normal"
+    android:paddingBottom="@dimen/margin_normal"
+    tools:background="?attr/colorPrimary">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/iv_card"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        app:cardElevation="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/detail_slider" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_toEndOf="@id/iv_card"
+        android:fontFamily="@font/gilory_semi_bold"
+        android:text="Mazda 3"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_alignParentEnd="true"
+
+        android:background="@drawable/bg_round_rect_outline"
+        android:padding="4dp"
+        android:text="0.5km away"
+        android:textAllCaps="true"
+        android:textColor="@color/item_text_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_alignBaseline="@id/tv_distance"
+        android:layout_alignStart="@id/tv_name"
+        android:layout_toStartOf="@id/tv_distance"
+        android:ellipsize="end"
+        android:fontFamily="@font/gilory_semi_bold"
+        android:maxLines="2"
+        android:text="SMS1000z . 5 Seater"
+        android:textColor="@color/white_80"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_rental_fee"
+        style="@style/DetailDateTimeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tv_name"
+        android:layout_alignBottom="@id/iv_card"
+        android:text="Fr.$3.00/hr"
+        android:textColor="@color/white_80" />
+
+    <TextView
+        android:id="@+id/tv_millage_fee"
+        style="@style/DetailDateTimeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_rental_fee"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_toEndOf="@id/tv_rental_fee"
+        android:text="$0.40/km"
+        android:textColor="@color/white_80" />
+
+    <TextView
+        android:id="@+id/tv_lbl_rental_fee"
+        style="@style/DetailLabelTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_rental_fee"
+        android:layout_alignStart="@id/tv_rental_fee"
+        android:layout_marginBottom="@dimen/margin_smaller"
+        android:text="Rental fee" />
+
+    <TextView
+        android:id="@+id/tv_lbl_millage_fee"
+        style="@style/DetailLabelTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_lbl_rental_fee"
+        android:layout_alignStart="@id/tv_millage_fee"
+        android:layout_marginBottom="@dimen/margin_smaller"
+        android:text="Rental fee" />
+
+</RelativeLayout>
